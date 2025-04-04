@@ -9,14 +9,14 @@ const MealCards = ({detail}) => {
   }
   
   return (
-    <div className='meals'>
+    <div className='meals flex gap-4 flex-wrap'>
       {!detail ? "" : detail.map((item) => {
         return(
           <div className='mealimg'>
         <img src={item.strMealThumb}/>
         <p>{item.strMeal}</p>
         <NavLink to={`/${item.idMeal}`}>
-        <button onClick={detailHandler}>Recipe</button>
+        <button onClick={detailHandler} className='px-3 py-2 bg-blue-400 rounded-md '>Recipe</button>
         </NavLink>
       </div>
         )
